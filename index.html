@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kocie-wostki</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        header {
+            background: #ed7db7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #ed7db7;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .hero {
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(to right, #ed7db7, #f19bc7);
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero button {
+            padding: 12px 25px;
+            border: none;
+            background: white;
+            color: #ed7db7;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background: #e6e6e6;
+        }
+
+        .content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        /* GALERIA */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #3d0e26;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kocie-wostki</h1>
+    </header>
+
+    <nav>
+        <a href="rasy.html">Rasy kotów</a>
+        <a href="ciekawostki.html">Ciekawostki</a>
+        <a href="smieszne.html">Śmieszne zachowania kotów</a>
+        <a href="zdjecia.html">Zdjęcia kotów</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Stworzona przez Maję Gontarek, nr 6</h1>
+        <br>
+        <button onclick="pokazWiadomosc()">Kliknij!</button>
+    </section>
+
+    <section class="content">
+        <h2>O kotach</h2>
+        <p>
+            Koty są zwierzętami domowymi, sporo osób preferuje je od psów,
+            mimo że obydwa gatunki są naszymi kochanymi pupilami.
+            Ta strona jest poświęcona ciekawostkom, rasom oraz
+            śmiesznymi zachowaniami kotków c:
+        </p>
+
+        <h2>Galeria kotów</h2>
+        <div class="gallery">
+            <img src="https://www.shutterstock.com/image-photo/beautiful-wonderful-cute-kitten-wallpaper-600nw-2435308283.jpg" alt="Kot 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRUcux_QhsmbgtdjMe3q2djMPS2oKtPYUAEw&s" alt="Kot 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrS0uhvzKQeWZ7lde98dMXwpdAkjsaFJw6HA&s" alt="Kot 3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvIe5ikGT76c7KRZGY7yO4Q8Wv53-ehnO5XA&s" alt="Kot 4">
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Kocie-wostki | Wykonała: Maja Gontarek
+    </footer>
+
+    <script>
+        function pokazWiadomosc() {
+            alert("Zaczęte: 19.05.2026\nSkończone: 21.05.2026");
+        }
+    </script>
+
+</body>
+</html>
