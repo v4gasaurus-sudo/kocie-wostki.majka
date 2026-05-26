@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rasy kotów</title>
+
+    <style>
+        /* Podstawowe style strony */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #3d0e26;
+        }
+
+        /* Nagłówek strony */
+        header {
+            background-color: #ed7db7;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* Główna zawartość */
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Sekcja z rasami kotów */
+        .cats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Karta pojedynczej rasy */
+        .card {
+            background-color: white;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Obraz kota */
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd; /* widoczne gdy brak zdjęcia */
+        }
+
+        /* Opis rasy */
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h2 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Stopka */
+        footer {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #ed7db7;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nagłówek -->
+    <header>
+        <h1>Rasy kotów</h1>
+        <p> – </p>
+    </header>
+
+    <!-- Główna treść -->
+    <main>
+        <h2>Najpopularniejsze rasy kotów</h2>
+        <p>
+            Koty są jednymi z najczęściej wybieranych zwierząt domowych.
+            Poniżej przedstawiono kilka popularnych ras kotów.
+        </p>
+
+        <section class="cats">
+
+            <!-- Kot perski -->
+            <div class="card">
+                <img src="https://www.hurtowniakarm.pl/img/uploads/Wpisy_blogowe/kot_perski1.jpg" alt="Kot perski">
+                <div class="card-content">
+                    <h2>Kot perski</h2>
+                    <p>
+                        Długowłosy kot o spokojnym usposobieniu i charakterystycznej spłaszczonej twarzy.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Kot syjamski -->
+            <div class="card">
+                <img src="https://zooart.com.pl/blog/wp-content/uploads/2020/05/koty-syjamskie-opis-rasy-3.png" alt="Kot syjamski">
+                <div class="card-content">
+                    <h2>Kot syjamski</h2>
+                    <p>
+                        Smukły, bardzo towarzyski kot o głośnym głosie i niebieskich oczach.
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- Maine Coon -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVNtQQRufD-HEnRt4crl4YC-IY9V-37uad_A&s" alt="Kot rasy Maine Coon">
+                <div class="card-content">
+                    <h2>Maine Coon</h2>
+                    <p>
+                        Duży, łagodny kot o puszystej sierści i przyjaznym charakterze.
+
+                    </p>
+                </div>
+            </div>
+
+             <!-- Ragdoll -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaRtaU-nJ5crQ20BA8tEmbT92DEpvGGP21nw&s" alt="Kot rasy Ragdoll">
+                <div class="card-content">
+                    <h2>Ragdoll</h2>
+                    <p>
+                        Wyjątkowo spokojny i ufny kot, który rozluźnia się na rękach człowieka.
+
+                    </p>
+                </div>
+            </div>
+ 
+             <!-- Kot brytyjski krótkowłosy -->
+            <div class="card">
+                <img src="https://pl.cats.com/wp-content/uploads/2020/10/British-Shorthair-cats.jpg" alt="Kot brytyjski krótkowłosy">
+                <div class="card-content">
+                    <h2>Brytyjski krótkowłosy</h2>
+                    <p>
+                        Spokojny, krępy kot z pluszową sierścią i okrągłą głową.
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- Kot Bengalski -->
+            <div class="card">
+                <img src="data:image/jpeg;base64,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" alt="Kot Bengalski">
+                <div class="card-content">
+                    <h2>Kot Bengalski</h2>
+                    <p>
+                        Wyjątkowo spokojny i ufny kot, który rozluźnia się na rękach człowieka.
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sfinks -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMdoP_PkolHnWXMZR4ebqbJwJQydwq96UqLw&s" alt="Kot rasy Sfinks">
+                <div class="card-content">
+                    <h2>Sfinks</h2>
+                    <p>
+                        Niemal bezwłosy, bardzo ciepłolubny i silnie przywiązany do opiekuna.
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- Kot Norweski leśny -->
+            <div class="card">
+                <img src="https://johndog.pl/wp-content/uploads/2024/01/artykul-john-dog-kocie-rasy-norweski-kot-lesny-wpis.jpg" alt="Kot Norweski leśny">
+                <div class="card-content">
+                    <h2>Norweski leśny</h2>
+                    <p>
+                        Silny, półdługowłosy kot przystosowany do chłodnego klimatu.
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- Scottish Fold -->
+            <div class="card">
+                <img src="https://www.catster.com/wp-content/uploads/2023/11/Scottish-Fold-Cat-laying-on-a-couch_Alexander-Sobol_Shutterstock.jpg" alt="Kot rasy Scottish Fold">
+                <div class="card-content">
+                    <h2>Scottish Fold</h2>
+                    <p>
+                        Znany z charakterystycznych, załamanych uszu i łagodnego temperamentu.
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- Abisyński -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFBIxqHc4dmkOrv9gyyHurE69vo-CL03rW4Q&s" alt="Kot Abyssyński">
+                <div class="card-content">
+                    <h2>Abyssyński</h2>
+                    <p>
+                        Inteligentny i aktywny kot o krótkiej, połyskującej sierści
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- Kot burmski -->
+            <div class="card">
+                <img src="https://johndog.pl/wp-content/uploads/2023/07/john-dog-artykul-kot-burmski-wpis.jpg" alt="Kot burmski">
+                <div class="card-content">
+                    <h2>Burmski</h2>
+                    <p>
+                        Bardzo towarzyski i uczuciowy kot, który mocno przywiązuje się do ludzi.
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- Kot rosyjski niebieski -->
+            <div class="card">
+                <img src="https://www.dolina-noteci.pl/data/include/img/news/1773899361.webp" alt="Kot rosyjski niebieski">
+                <div class="card-content">
+                    <h2>Kot rosyjski niebieski</h2>
+                    <p>
+                        Elegancki, cichy kot o srebrzystoniebieskiej sierści i zielonych oczach.
+
+                    </p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Stopka -->
+    <footer>
+        <a href="index.html">← Powrót na stronę główną</a>
+    </footer>
+
+</body>
+</html>
